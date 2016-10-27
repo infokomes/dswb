@@ -17,16 +17,20 @@ Rozwiązanie
     int m = 0; funkcja przyjmuje zawsze 0 jesli 
     (min elementy > 0 ) (max elementy < 0)
     ,a powinno być int m = tabl[0]
-
+    //domyślnie 0, a lepiej dać pierwszy element
+    
     frame 34 
     avg dzielenie przez 0
     input 0 5
 
     frame 46 49
+   
+    //Nie sprawdza czy jest > 100 oraz nie może być wartość 0
     
     scanf("%d", &tabl[1]);  # zaczyna od 1 , a tabl zaczyna sie od 0 -> tab[0] = 0
     
     for (i=2; i<=n; i++) # <=n przec co tracimy ostatnia zmienna
+    // nie poprawny zakres powinno być i<n 
     
 ## Zadanie domowe 3
 Znajdź błędy za pomocą gdb w programie odwroc_tablice.c
@@ -36,13 +40,16 @@ Rozwiązanie
     ulimit -c 1024
     g++ -g odwroc_tablice.c -o odwroc_tablice
     
-    0 shuold be cout pusta tablica
+    frame 18
+    //Nie sprawdza czy jest > 100 oraz nie może być wartość 0
     
     frame 28
-    wyswietl(tablica, 5);  5 should be n
+    wyswietl(tablica, 5);  
+    //Na sztywno wyświetlanie 5 elementów tylko!!!!
     
     frame 32
     for (int i=0; i<n; i++) should be for (int i=0; i<n/2; i++) {n/2}
+    //Ograniczyć do połowy tablic? Bo nie odwróci, podwójnie odwróci
 
 
  
@@ -55,6 +62,9 @@ Rozwiązanie
     g++ -g wielomian.c -o wielomianT
     
     powinny być flout zmienne
+    
+    frame 10
+    //Z inta na float
     
     dla zmiennych 0 0 0
     frame 12 43
